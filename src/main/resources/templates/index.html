@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+</head>
+<body>
+
+<ul>
+<li th:each="hotel : ${hotels}">
+    <p th:text="${hotel}"></p>
+</li>
+</ul>
+
+<form action="/save" method="post" >
+
+    <input type="text" name="name" placeholder="name" />
+    <input type="number" name="pricePerNight" placeholder="pricePerNight" />
+    <input type="text" name="city" placeholder="city" />
+    <input type="text" name="country" placeholder="country" />
+    <input type="text" name="userName" placeholder="userName" />
+    <input type="number" name="rating" placeholder="rating" />
+    <input type="submit" placeholder="save"/>
+</form>
+</body>
+</html>
